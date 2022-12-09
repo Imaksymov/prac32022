@@ -44,6 +44,6 @@ jobs:
         docker build -t messer85k/pr3 .
         docker run -d -p 5000:5000 messer85k/pr3 
         docker ps -a
-        docker login -u ${{ secrets.login }} -p ${{ secrets.pass }}
+        docker login -u ${{ secrets.LOGIN }} -p ${{ secrets.PASSWORD }}
 
         docker push messer85k/pr3:latest
