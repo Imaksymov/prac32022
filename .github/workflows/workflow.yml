@@ -41,9 +41,9 @@ jobs:
         CI: true
     - name: deploy
       run: |
-        docker build -t Imaksymov/pr3 .
-        docker run -d -p 5000:5000 Imaksymov/pr3 
+        docker build -t messer85k/pr3 .
+        docker run -d -p 5000:5000 messer85k/pr3 
         docker ps -a
         docker login -u ${{ secrets.login }} -p ${{ secrets.pass }}
 
-        docker push Imaksymov/pr3:latest
+        docker push messer85k/pr3:latest
